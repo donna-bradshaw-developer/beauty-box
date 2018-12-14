@@ -1,0 +1,24 @@
+#app {
+    text-align: center;
+    color: $stormcloud ;
+}
+
+#nav {
+    padding: 30px;
+    
+    span{
+        margin: 0px 15px;
+    }
+}
+
+a {
+    font-size: 135%;
+    font-weight: bold;
+    color: $stormcloud; 
+    &.router-link-exact-active {
+        color: $bittersweet;
+    }
+    &:hover{
+        color: $beige;
+    }
+}

@@ -1,0 +1,59 @@
+.option{
+    background-color: whitesmoke;
+    color: $weldon-blue;
+    padding: 15px 10px;
+    margin: 15px 0px;
+    text-align: center;
+    &:hover{
+        box-shadow: 5px 8px $stormcloud;
+    }
+    @include medium{
+        margin: 11% 0px;
+    }
+    @include large{
+        margin: 10% 15% 0px 15%;
+    }
+    @include extra-large{
+        margin: 10% 18% 0px 18%;
+    }
+    .information{
+        margin: 0px 10px;
+        .optionName{
+            background-color: $weldon-blue;
+            color: whitesmoke;
+            padding: 5px;
+            margin: 0px;
+        }
+        .description{
+            margin: 0px;
+            background-color: whitesmoke;
+            margin: 0px;
+            padding: 15px;
+            color: $weldon-blue;
+        }
+    }
+    .price{
+        background-color: whitesmoke;
+        margin: 0px 10px;
+        padding: 10px 0px;
+        color: $bittersweet;
+        font-weight: bold;
+    }
+    @include small{
+        margin: 30px;
+    }
+}
+
+.option.active-option{
+    background-color: $bittersweet;
+    .information{
+        .optionName{
+            background-color: $stormcloud;
+        }
+        .description{
+            p{
+                color: $stormcloud;
+            }
+        }
+    }
+}

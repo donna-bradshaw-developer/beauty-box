@@ -1,0 +1,49 @@
+
+
+body{
+    background-color:  $columbia-blue;
+}
+
+.container{
+    margin: 5% 15%;
+    font-size: 150%;
+}
+
+.beauty{
+    color: $bittersweet;
+    font-family: $dancing-script
+}
+
+img{
+    width: 200px;
+    height: auto;
+}
+
+form{
+    text-align: right;
+    margin: 0px 18%;
+    @include medium{
+        margin: 0px 24% 0px 18%;
+    }
+    @include large{
+        margin: 0px 30% 0px 18%;
+    }
+    @include extra-large{
+        margin: 0px 35% 0px 18%;
+    }
+    input{
+        padding: 8px;
+        margin: 10px;
+        width: 340px;
+        text-align: center;
+    }
+    label{
+        font-weight: bold;
+    }
+}
+
+textarea{
+    width: 355px;
+    margin: 0px 10px;
+    text-align: center;
+}

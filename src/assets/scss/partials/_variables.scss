@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+/// COLORS ///
+$columbia-blue: #b8d8d8;
+$weldon-blue: #7A9E9F;
+$stormcloud: #4F6367;
+$bittersweet: #FA7268;
+$beige: #EEF5DB;
+
+
+/// FONTS  ///
+$dancing-script: 'Dancing Script', cursive;
+
+
+/// BREAK POINTS ///
+// Small tablets and large smartphones (landscape view)
+$screen-small-min: 511px;
+
+// Small tablets (portrait view)
+$screen-medium-min: 768px;
+
+// Tablets and small desktops
+$screen-large-min: 925px;
+
+// Large tablets and desktops
+$screen-extra-large-min: 1200px;
+
+
+/// MIXINS ///
+@mixin small{
+    @media (min-width: #{$screen-small-min}) and (max-width: #{$screen-medium-min - 1}){
+        @content;
+    }
+}
+
+// Medium devices
+@mixin medium {
+    @media only screen and (min-width: #{$screen-medium-min}) and (max-width: #{$screen-large-min - 1}){
+        @content;
+    }
+}
+
+// Large devices
+@mixin large {
+    @media only screen and (min-width: #{$screen-large-min}) and (max-width: #{$screen-extra-large-min - 1}){
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin extra-large {
+    @media only screen and (min-width: #{$screen-extra-large-min}){
+        @content;
+    }
+}
+
+// Custom
+@mixin custom-min($screen){
+    @media only screen and (min-width: $screen + 'px') {
+        @content;
+    }
+}
+
+@mixin custom-max($screen){
+    @media only screen and (max-width: $screen + 'px') {
+        @content;
+    }
+}
+
+@mixin custom-range($min, $max){
+    @media only screen and (min-width: $min + 'px') and (max-width: $max + 'px'){
+        @content;
+    }
+}
